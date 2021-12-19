@@ -14,7 +14,7 @@ int main()
 		<< "1)Воин" << endl
 		<< "2)Лучник" << endl
 		<< "3)Маг" << endl;
-	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level;
+	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level, hero_poison;
 	cin >> hero_type;
 
 	if (hero_type < 0 || hero_type > 4) // проверка корректности
@@ -32,6 +32,7 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
+			hero_poison = 0;
 			hero_type_name = "Воин";
 		}
 		if (hero_type == 2)
@@ -41,6 +42,7 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
+			hero_poison = 0;
 			hero_type_name = "Лучник";
 		}
 		if (hero_type == 3)
@@ -50,6 +52,7 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
+			hero_poison = 0;
 			hero_type_name = "Маг";
 		}
 		system("cls"); //очистка консоли
