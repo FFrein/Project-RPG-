@@ -12,8 +12,24 @@ int main()
 	cin >> hero_name;
 	cout << "Тип героя: " << endl
 		<< "1)Воин" << endl
+		<< "           |       " << endl
+		<< "           |       " << endl
+		<< "           |     " << endl
+		<< "          ---    " << endl
+		<< "           ]    " << endl
 		<< "2)Лучник" << endl
-		<< "3)Маг" << endl;
+		<< "           |\     " << endl
+		<< "           | |      " << endl
+		<< "        >--| |------>" << endl
+		<< "           | |    " << endl
+		<< "           |/    " << endl
+		<< "3)Маг" << endl
+		<< "         _______     " << endl
+		<< "        /       \     " << endl
+		<< "       |  x    x |     " << endl
+		<< "       |         |     " << endl
+		<< "       |   ---   |     " << endl
+		<< "        \_______/     " << endl;
 	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level, hero_poison;
 	cin >> hero_type;
 
