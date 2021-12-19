@@ -6,21 +6,21 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-	cout << "Приветствую тебя, странник. Как тебя зовут? ";
+	cout << "РџСЂРёРІРµС‚СЃС‚РІСѓСЋ С‚РµР±СЏ, СЃС‚СЂР°РЅРЅРёРє. РљР°Рє С‚РµР±СЏ Р·РѕРІСѓС‚? ";
 	string hero_name;
 	string hero_type_name;
 	cin >> hero_name;
-	cout << "Тип героя: " << endl
-		<< "1)Воин" << endl
-		<< "2)Лучник" << endl
-		<< "3)Маг" << endl;
+	cout << "РўРёРї РіРµСЂРѕСЏ: " << endl
+		<< "1)Р’РѕРёРЅ" << endl
+		<< "2)Р›СѓС‡РЅРёРє" << endl
+		<< "3)РњР°Рі" << endl;
 	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level;
 	cin >> hero_type;
 
-	if (hero_type < 0 || hero_type > 4) // проверка корректности
+	if (hero_type < 0 || hero_type > 4) // РїСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё
 	{
 		do {
-			cout << "Введите корректно";
+			cout << "Р’РІРµРґРёС‚Рµ РєРѕСЂСЂРµРєС‚РЅРѕ";
 			cin >> hero_type;
 		} while (hero_type < 0 || hero_type > 3);
 	}
@@ -32,7 +32,7 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
-			hero_type_name = "Воин";
+			hero_type_name = "Р’РѕРёРЅ";
 		}
 		if (hero_type == 2)
 		{
@@ -41,7 +41,7 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
-			hero_type_name = "Лучник";
+			hero_type_name = "Р›СѓС‡РЅРёРє";
 		}
 		if (hero_type == 3)
 		{
@@ -50,13 +50,13 @@ int main()
 			hero_intellect = 5;
 			hero_money = 100;
 			hero_level = 1;
-			hero_type_name = "Маг";
+			hero_type_name = "РњР°Рі";
 		}
-		system("cls"); //очистка консоли
-		cout << "Приветсвую тебя, " << hero_type_name << " " << hero_name << ". Добро пожаловать в игру :)\n Вот твои начальные характеристики:" << endl << //персонаж и его характеристики
-			"Здоровье: " << hero_health << endl <<
-			"Ловкость: " << hero_agility << endl <<
-			"Интеллект: " << hero_intellect << endl <<
-			"Начальные деньги: " << hero_money << endl;
+		system("cls"); //РѕС‡РёСЃС‚РєР° РєРѕРЅСЃРѕР»Рё
+		cout << "РџСЂРёРІРµС‚СЃРІСѓСЋ С‚РµР±СЏ, " << hero_type_name << " " << hero_name << ". Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РёРіСЂСѓ :)\n Р’РѕС‚ С‚РІРѕРё РЅР°С‡Р°Р»СЊРЅС‹Рµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё:" << endl << //РїРµСЂСЃРѕРЅР°Р¶ Рё РµРіРѕ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё
+			"Р—РґРѕСЂРѕРІСЊРµ: " << hero_health << endl <<
+			"Р›РѕРІРєРѕСЃС‚СЊ: " << hero_agility << endl <<
+			"РРЅС‚РµР»Р»РµРєС‚: " << hero_intellect << endl <<
+			"РќР°С‡Р°Р»СЊРЅС‹Рµ РґРµРЅСЊРіРё: " << hero_money << endl;
 
 }
