@@ -1,0 +1,131 @@
+h1 {
+  font-family: Courier New;
+  color: white;
+}
+
+h2 {
+  font-family: Courier New;
+  color: white;
+}
+
+p {
+font-size:4;
+font-family: Courier New;
+color: white;
+}
+
+header{
+background: white;
+margin-bottom: 100px; /* Отменяем подчеркивание у ссылки */
+}
+
+header h2{
+  display: inline-block;
+  font-family: Courier New;
+  color: black;
+  padding-left:120px;
+}
+
+header img{
+  width:2%;
+  padding-left: 100px;
+  padding-top: 15px;
+}
+
+header a{
+  text-decoration: none;
+}
+header a:link {
+ color: black; /* Цвет непосещенных ссылок */
+}
+header a:visited {
+ color: black; /* Цвет посещенных ссылок */
+}
+
+body {
+max-width: 1536px; /*максимальная ширина страницы*/
+margin: auto; /*равные внешние отступы слева и справа*/
+background: black; /*цвет фона*/
+}
+
+footer {
+
+}
+
+.type_a{
+padding-bottom: 150px;
+}
+
+.type_a p{
+max-width:50%;
+float:left;
+padding-bottom: 50px;
+}
+
+.type_a img {
+padding-left:20%;
+}
+
+.type_b{
+padding-bottom: 150px;
+}
+
+.type_b p {
+width:700px;
+float:right;
+text-align: right;
+}
+
+.type_b h1 {
+padding-top:150px;
+text-align: right;
+}
+
+.type_b h2 {
+padding-top:50px;
+text-align: right;
+}
+
+.type_b img {
+
+}
+
+.type_c{
+padding-bottom: 150px;
+}
+
+.type_c p {
+padding-bottom: 50px;
+}
+
+.type_c h1{
+padding-top: 150px;
+text-align: left;
+}
+
+.type_c h2{
+text-align: left;
+}
+
+.type_c img {
+
+}
+
+figure{
+  display: inline-block;
+  padding-left:1%;
+}
+
+figcaption{
+color:white;
+text-align: center;
+}
+
+footer{
+  background:white;
+}
+
+footer p{
+  margin:auto;
+  color:black;
+}
