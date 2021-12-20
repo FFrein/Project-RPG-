@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void Store( int* hero_money, int* hero_health, int* hero_agility, int* hero_intellect, int* hero_poison) ////// Разобраться с переходом переменныъ из одной функции в другую
+void Store() ////// Разобраться с переходом переменныъ из одной функции в другую
 {
 	setlocale(LC_ALL, "RUS");
 
