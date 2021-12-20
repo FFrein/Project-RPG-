@@ -1,10 +1,13 @@
 #include <iostream>
 #include <math.h>
 #include <string>
+#include <Windows.h>
 using namespace std;
-
+int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level, hero_poison;
 int main()
 {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "RUS");
 	cout << "Приветствую тебя, странник. Как тебя зовут? ";
 	string hero_name;
@@ -18,23 +21,22 @@ int main()
 		<< "          ---    " << endl
 		<< "           ]     " << endl
 		<< "2)Лучник" << endl
-		<< "           |\         " << endl
+		<< "           |\\        " << endl
 		<< "           | |        " << endl
 		<< "        >--| |------> " << endl
 		<< "           | |        " << endl
 		<< "           |/         " << endl
 		<< "3)Маг" << endl
 		<< "         _______            " << endl
-		<< "        /       \     -XX-  " << endl
+		<< "        /       \\     -XX-  " << endl
 		<< "       |  o    o |     ||   " << endl
 		<< "       |         |     ||   " << endl
-		<< "       |   \---/ |     ||   " << endl
-		<< "        \_______/      ||   " << endl
+		<< "       |   \\---/ |     ||   " << endl
+		<< "        \\_______/      ||   " << endl
 		<< "                       ||   " << endl
-		<< "                      /||\   " << endl;
+		<< "                      /||\\   " << endl;
 	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level, hero_poison;
 	cin >> hero_type;
-
 	if (hero_type < 0 || hero_type > 4) // проверка корректности
 	{
 		do {
