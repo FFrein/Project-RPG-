@@ -27,10 +27,12 @@ choosing:
 		Store();//магазин
 	case'b':
 		system("cls");
-		//Battle();//бой
+		//Battle();
+		//бой
 	case'j':
 		system("cls");
-		//Journey();//путешествие
+		//Journey();
+		//путешествие
 	default:
 		system("cls");
 		goto choosing;
