@@ -37,6 +37,18 @@ int main()
 		<< "                      /||\\   " << endl;
 	int hero_type, hero_health, hero_agility, hero_intellect, hero_money, hero_level, hero_poison;
 	cin >> hero_type;
+	while (true) // проверка корректности на ввод числа при выборе
+	{
+		cin >> hero_type;
+		if (!cin)
+		{
+			cout << "Некорректный ввод, попробуйте снова\n";
+			cin.clear();
+			while (cin.get() != '\n');
+		}
+		else break;
+	}
+	cout << hero_type << endl;
 	if (hero_type < 0 || hero_type > 4) // проверка корректности
 	{
 		do {
