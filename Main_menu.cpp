@@ -24,25 +24,29 @@ choosing:
 	{
 	case's':
 		system("cls");
-		Store();
-
+		Store();//магазин
+	case'b':
+		system("cls");
+		//Battle();//бой
+	case'j':
+		system("cls");
+		//Journey();//путешествие
 	default:
 		system("cls");
-		Sleep(50);
 		goto choosing;
 	}
 }
 
 
 void statsHero() {
-	cout << "--------------------------------------------------------------------------------------" << endl;
-	cout<<hero_type_name << " " << hero_name << " уровень " << hero_level << endl;
+	cout << "---------------------------------------------Лагерь----------------------------------------------" << endl;
+	cout<<hero_type_name << " " << hero_name << "         уровень : " << hero_level << endl;
 	cout << "Здоровье: " << hero_health << endl;
 	cout << "Ловкость: " << hero_agility << endl;
 	cout << "Интелект: " << hero_intellect << endl;
 	cout << "Зелья: " << hero_poison << endl << endl;
 	cout << "Золото: " << hero_money << endl;
-	cout << "--------------------------------------------------------------------------------------" << endl;
+	cout << "------------ s - shop ---------------- b - battle -------------- j - journey --------------------" << endl;
 }
 
 
