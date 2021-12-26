@@ -4,9 +4,7 @@ li {
 }
 
 header{
-background: -webkit-linear-gradient(225deg, rgb(156, 156, 156) 16%, rgb(34, 34, 34) 90%);
-background: -moz-linear-gradient(225deg, rgb(156, 156, 156) 16%, rgb(34, 34, 34) 90%);
-background: linear-gradient(225deg, rgb(156, 156, 156) 16%, rgb(34, 34, 34) 90%);
+background: linear-gradient(45deg, #30cfd0, #330867);
 position: fixed;
 width : 80%;
 z-index: 100;
@@ -29,6 +27,7 @@ header img{
 
 header a{
   text-decoration: none;
+
 }
 header a:link {
  color: black; /* Цвет непосещенных ссылок */
@@ -37,23 +36,31 @@ header a:visited {
  color: black; /* Цвет посещенных ссылок */
 }
 
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(45deg, #30cfd0, #330867);
+  color: linear-gradient(45deg, #30cfd0, #330867);
+}
+
 .abutton {
   height: 42px;
 	border: none;
-	background: gray;
-	color: white;
+	color: 	#0F273F;
 	padding: 10px;
 	font-size: 18px;
 	border-radius: 5px;
 	position: relative;
 	box-sizing: border-box;
 	transition: all 500ms ease;
+  box-shadow: 7px 4px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
 .abutton:hover {
+  transition: 2s;
 	background: rgba(0,0,0,0);
 	color: black;
-	box-shadow: inset 0 0 0 3px black;
+	box-shadow: 8px 10px 8px 0px rgba(34, 60, 80, 0.59) inset;
 }
 
 body {
@@ -169,6 +176,7 @@ footer {
 }
 
 footer p{
+  padding-top: 2%;
   margin:auto;
   color:black;
 }
