@@ -152,7 +152,6 @@ text-align: left;
 }
 
 .type_c img {
-
 }
 
 figure{
@@ -170,13 +169,11 @@ text-align: center;
 }
 
 footer {
-  background: -webkit-linear-gradient(0deg, rgb(150, 150, 150) 5%, rgb(0, 0, 0) 100%);
-  background: -moz-linear-gradient(0deg, rgb(150, 150, 150) 5%, rgb(0, 0, 0) 100%);
-  background: linear-gradient(0deg, rgb(150, 150, 150) 5%, rgb(0, 0, 0) 100%);
+background: linear-gradient(45deg, #30cfd0, #330867);
 }
 
 footer p{
-  padding-top: 2%;
+  padding-top: 1%;
   margin:auto;
   color:black;
 }
