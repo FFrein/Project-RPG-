@@ -1,11 +1,1 @@
-﻿  Main_menu.cpp
-D:\Projects\RGP_Game\RGP_Game\ClassSelection.h(42,15): warning C4102: choosing_class: неиспользованная метка
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(59,24): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(68,32): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(113,3): warning C4551: в вызове функции отсутствует список аргументов
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(206,3): warning C4551: в вызове функции отсутствует список аргументов
-D:\Projects\RGP_Game\RGP_Game\Battle_module.h(299,3): warning C4551: в вызове функции отсутствует список аргументов
-D:\Projects\RGP_Game\RGP_Game\Boss_Fight.h(26,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Projects\RGP_Game\RGP_Game\Boss_Fight.h(157): warning C4715: Boss: значение возвращается не при всех путях выполнения
-  RGP_Game.vcxproj -> D:\Projects\RGP_Game\x64\Debug\RGP_Game.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: Не удается найти средства сборки для v143 (набор инструментов платформы = "v143"). Чтобы выполнить сборку с использованием средств сборки v143 установите средства сборки v143.  Кроме того, можно выполнить обновление до текущей версии средств Visual Studio, перейдя в меню "Проект" или щелкнув решение правой кнопкой мыши и выбрав "Обновить решение...".
