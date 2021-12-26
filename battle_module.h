@@ -12,9 +12,9 @@
 #include <iostream>
 using namespace std;
 void voin(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int* stom, int mob_damage);
-int archer(int *health_hero,int* health_mob,int damag,int damag_weap,int level_hero,int mob_lvl, int m1,int agility_hero,int *stom,int mob_damage);
-int mag(int *health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int intellect_hero,int* stom,int mob_damage);
-void enemy(int *choose_monster, int *mob_health, int *mob_damage, int *level_mob);
+int archer(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int agility_hero, int* stom, int mob_damage);
+int mag(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int intellect_hero, int* stom, int mob_damage);
+void enemy(int* choose_monster, int* mob_health, int* mob_damage, int* level_mob);
 void main()
 {
 	setlocale(LC_ALL, "Rus");
@@ -75,83 +75,38 @@ void main()
 			break;
 		}
 	} while (health_mob >= 0 && hero_health >= 0);
-	if (health_mob <=0)
+	if (health_mob <= 0)
 	{
 		cout << "You win!" << endl;
 		if (mob_level > hero_level)
 		{
-			exp = (hero_level / mob_level) * 100;
-			money += (mob_level / hero_level) * 50;
+			money += 50;
 			cout << "Вы получаете" << money << "золота " << endl;
-			cout << "Вы получаете" << exp << " опыта" << endl;
+			exp += 50;
+			cout << "Вы получаете 50 опыта" << endl;
+			cout <<"У вас " << exp << " опыта" << endl;
+
 		}
 		else
 		{
-			cout << "Вы получаете" << exp << " опыта" << endl;
-			exp = (hero_level / mob_level) * 100;
-			money += (mob_level / hero_level) * 100;
+			money += 30;
 			cout << "Вы получаете " << money << " золота " << endl;
+			exp += 30;
+			cout << "Вы получаете 30 опыта" << endl;
+			cout <<"У вас " << exp << " опыта" << endl;
 		}
 	}
-	if (hero_health <=0)
+	if (hero_health <= 0)
 	{
 		cout << "You lose!";
 	}
 }
 
-void voin(int *health_hero,int *health_mob,int damag,int damag_weap,int level_hero,int mob_lvl,int m1,int *stom,int mob_damage)
+void voin(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int* stom, int mob_damage)
 {
-	
-		damag = (level_hero*10)+damag_weap;
-		cout << "1 атака оружием " << endl << "2 метнуть кинжал " << endl<<"3 Блокировать " << endl;
-		cin >> m1;
-		if (1 > 4 && m1 < 0)
-		{
-			cout << "Не та фун-ция" << endl;
-		}
-		if (m1 == 1)
-		{
-			
-				cout << "урон по врагу : " << damag << endl;
-				*health_mob -= damag;
-				cout << "У врага : " << *health_mob << " hp" << endl;
-				cout << "Получаемый урон : "<< mob_damage << endl;
-				*health_hero -= mob_damage;
-				cout << "Жизни героя : " << *health_hero<< " hp " << endl;
-				*stom -= 30;
-				cout << "Выносливость : " << *stom << endl;
-			
-		}
-		if (m1 == 2)
-		{
-			
-				cout << "урон по врагу " << damag << " жизней " << endl;
-				*health_mob -= damag;
-				cout << "У врага " << *health_mob << " жизней " << endl;
-				cout << "Получаемый урон :  "<< mob_damage << endl;
-				*health_hero -= mob_damage;
-				cout << "Жизни героя : " << *health_hero << endl;
-				*stom -= 15;
-				cout << "Выносливость : " <<*stom << endl;
-						
-		}
-		if (m1 == 3)
-		{
-			cout << "У врага " << *health_mob << " жизней " << endl;
-			cout << "Получаемый урон :  " << mob_damage/2 << endl;
-			*health_hero -= mob_damage/2;
-			cout << "Жизни героя : " << *health_hero << endl;
-			*stom += 15;
-			cout << "Выносливость : " << *stom << endl;
-		}
 
-
-	}
-
-int archer(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int agility_hero,int* stom, int mob_damage)
-{
-	damag = damag_weap + ((agility_hero/2) * level_hero);
-	cout << "1 Одиночный выстрел" << endl << "2 Огненная стрела " << endl << endl;
+	damag = (level_hero * 10) + damag_weap;
+	cout << "1 атака оружием " << endl << "2 метнуть кинжал " << endl << "3 Блокировать " << endl;
 	cin >> m1;
 	if (1 > 4 && m1 < 0)
 	{
@@ -159,45 +114,93 @@ int archer(int* health_hero, int* health_mob, int damag, int damag_weap, int lev
 	}
 	if (m1 == 1)
 	{
-			cout << "урон по врагу : " << damag << endl;
-			*health_mob -= damag;
-			cout << "У врага : " << *health_mob << " hp" << endl;
-			cout << "Получаемый урон : "<< mob_damage << endl;
-			*health_mob -= mob_damage;
-			cout << "Жизни героя : " << *health_mob<<" hp " << endl;
-			*stom -= 15;
-			cout << "Выносливость : " << *stom << endl;
+
+		cout << "урон по врагу : " << damag << endl;
+		*health_mob -= damag;
+		cout << "У врага : " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон : " << mob_damage << endl;
+		*health_hero -= mob_damage;
+		cout << "Жизни героя : " << *health_hero << " hp " << endl;
+		*stom -= 30;
+		cout << "Выносливость : " << *stom << endl;
 
 	}
 	if (m1 == 2)
 	{
-		
-			cout << "урон по врагу  " << damag << " hp " << endl;
-			*health_mob -= damag;
-			cout << "У врага " <<*health_mob << " hp" << endl;
-			cout << "Получаемый урон :  " << mob_damage<<" hp " << endl;
-			*health_hero -= mob_damage;
-			cout << "Жизни героя : " <<*health_hero <<" hp" << endl;
-			*stom -= 30;
-			cout << "Выносливость : " << *stom << endl;
-		
+
+		cout << "урон по врагу " << damag << " жизней " << endl;
+		*health_mob -= damag;
+		cout << "У врага " << *health_mob << " жизней " << endl;
+		cout << "Получаемый урон :  " << mob_damage << endl;
+		*health_hero -= mob_damage;
+		cout << "Жизни героя : " << *health_hero << endl;
+		*stom -= 15;
+		cout << "Выносливость : " << *stom << endl;
+
 	}
 	if (m1 == 3)
 	{
-		cout << "У врага " <<* health_mob << " hp" << endl;
-		cout << "Получаемый урон :  " << (mob_damage*2)/3<<" hp" << endl;
+		cout << "У врага " << *health_mob << " жизней " << endl;
+		cout << "Получаемый урон :  " << mob_damage / 2 << endl;
+		*health_hero -= mob_damage / 2;
+		cout << "Жизни героя : " << *health_hero << endl;
+		*stom += 15;
+		cout << "Выносливость : " << *stom << endl;
+	}
+
+
+}
+
+int archer(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int agility_hero, int* stom, int mob_damage)
+{
+	damag = damag_weap + ((agility_hero / 2) * level_hero);
+	cout << "1 Одиночный выстрел" << endl << "2 Огненная стрела " << endl << "3 Блокировать" << endl;
+	cin >> m1;
+	if (1 > 4 && m1 < 0)
+	{
+		cout << "Не та фун-ция" << endl;
+	}
+	if (m1 == 1)
+	{
+		cout << "урон по врагу : " << damag << endl;
+		*health_mob -= damag;
+		cout << "У врага : " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон : " << mob_damage << endl;
+		*health_mob -= mob_damage;
+		cout << "Жизни героя : " << *health_mob << " hp " << endl;
+		*stom -= 15;
+		cout << "Выносливость : " << *stom << endl;
+
+	}
+	if (m1 == 2)
+	{
+
+		cout << "урон по врагу  " << damag << " hp " << endl;
+		*health_mob -= damag;
+		cout << "У врага " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон :  " << mob_damage << " hp " << endl;
+		*health_hero -= mob_damage;
+		cout << "Жизни героя : " << *health_hero << " hp" << endl;
+		*stom -= 30;
+		cout << "Выносливость : " << *stom << endl;
+
+	}
+	if (m1 == 3)
+	{
+		cout << "У врага " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон :  " << (mob_damage * 2) / 3 << " hp" << endl;
 		*health_hero = (*health_hero * 20) / 100;
-		cout << "Жизни героя : " <<*health_hero<<" hp" << endl;
+		cout << "Жизни героя : " << *health_hero << " hp" << endl;
 		*stom += 15;
 		cout << "Выносливость : " << *stom << endl;
 	}
 	return(m1);
 }
 
-int mag(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int intellect_hero,int* stom, int mob_damage)
+int mag(int* health_hero, int* health_mob, int damag, int damag_weap, int level_hero, int mob_lvl, int m1, int intellect_hero, int* stom, int mob_damage)
 {
-	damag = damag_weap + ((intellect_hero/2)*level_hero);
-	cout << "1 Ударить молнией " << endl << "2 Метнуть фаербол " << endl << endl;
+	damag = damag_weap + ((intellect_hero / 2) * level_hero);
+	cout << "1 Ударить молнией " << endl << "2 Метнуть фаербол " << endl << "3 Блокировать" << endl;
 	cin >> m1;
 	if (m1 > 4 && m1 < 0)
 	{
@@ -205,39 +208,39 @@ int mag(int* health_hero, int* health_mob, int damag, int damag_weap, int level_
 	}
 	if (m1 == 1)
 	{
-		
-			cout << "урон по врагу : " << damag << endl;
-			*health_mob -= damag;
-			cout << "У врага : " << *health_mob << " hp" << endl;
-			cout << "Получаемый урон : "<< mob_damage<<" hp" << endl;
-			*health_hero -= mob_damage;
-			cout << "Жизни героя : " << *health_hero << endl;
-			*stom -= 20;
-			cout << "Выносливость : " << *stom << endl;
+
+		cout << "урон по врагу : " << damag << endl;
+		*health_mob -= damag;
+		cout << "У врага : " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон : " << mob_damage << " hp" << endl;
+		*health_hero -= mob_damage;
+		cout << "Жизни героя : " << *health_hero << endl;
+		*stom -= 20;
+		cout << "Выносливость : " << *stom << endl;
 	}
 	if (m1 == 2)
 	{
-			cout << "урон по врагу : " << damag + 20 << " hp " << endl;
-			*health_hero -= damag + 20;
-			cout << "У врага " <<*health_mob << " hp" << endl;
-			cout << "Получаемый урон : "<< mob_damage<<" hp" << endl;
-			*health_hero -= mob_damage;
-			cout << "Жизни героя : " << *health_hero << " hp" << endl;
-			*stom -= 30;
-			cout << "Выносливость : " << *stom << endl;
+		cout << "урон по врагу : " << damag + 20 << " hp " << endl;
+		*health_hero -= damag + 20;
+		cout << "У врага " << *health_mob << " hp" << endl;
+		cout << "Получаемый урон : " << mob_damage << " hp" << endl;
+		*health_hero -= mob_damage;
+		cout << "Жизни героя : " << *health_hero << " hp" << endl;
+		*stom -= 30;
+		cout << "Выносливость : " << *stom << endl;
 	}
 	if (m1 == 3)
 	{
 		cout << "У врага " << *health_mob << " жизней" << endl;
-		cout << "Получаемый урон :  " << (mob_damage * 3) / 4 <<" hp" << endl;
-		*health_hero -= (mob_damage*3)/4;
-		cout << "Жизни героя : " << *health_hero<<" hp" << endl;
+		cout << "Получаемый урон :  " << (mob_damage * 3) / 4 << " hp" << endl;
+		*health_hero -= (mob_damage * 3) / 4;
+		cout << "Жизни героя : " << *health_hero << " hp" << endl;
 		*stom += 15;
 		cout << "Выносливость : " << *stom << endl;
 	}
 	return(m1);
 }
-void enemy(int *choose_monster,int *mob_health,int *mob_damage,int *level_mob)// Выбор врагов
+void enemy(int* choose_monster, int* mob_health, int* mob_damage, int* level_mob)// Выбор врагов
 {
 	string mob_name;
 	if (*choose_monster == 0)
@@ -274,7 +277,7 @@ void enemy(int *choose_monster,int *mob_health,int *mob_damage,int *level_mob)//
 		cout << " уровeнь : " << *level_mob << endl;
 		*mob_health = 10 * *level_mob;
 		*mob_damage = *level_mob * 2;
-		cout << "Жизни врага : " <<*mob_health << endl << "Урон врага : " << *mob_damage << endl;
+		cout << "Жизни врага : " << *mob_health << endl << "Урон врага : " << *mob_damage << endl;
 	}
 	if (*choose_monster == 4)
 	{
@@ -300,8 +303,8 @@ void enemy(int *choose_monster,int *mob_health,int *mob_damage,int *level_mob)//
 		cout << "Вы встретили : " << endl << '\t' << mob_name;
 		cout << " уровeнь : " << *level_mob << endl;
 		*mob_health = 10 * *level_mob;
-		*mob_damage =*level_mob * 2;
-		cout << "Жизни врага : " <<*mob_health << endl << "Урон врага : " <<*mob_damage << endl;
+		*mob_damage = *level_mob * 2;
+		cout << "Жизни врага : " << *mob_health << endl << "Урон врага : " << *mob_damage << endl;
 	}
 	if (*choose_monster == 7)
 	{
