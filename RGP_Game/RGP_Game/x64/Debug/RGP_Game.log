@@ -1,12 +1,12 @@
 ﻿  Main_menu.cpp
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\ClassSelection.h(42,15): warning C4102: choosing_class: неиспользованная метка
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(59,37): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(68,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(113,3): warning C4551: в вызове функции отсутствует список аргументов
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(206,3): warning C4551: в вызове функции отсутствует список аргументов
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(299,3): warning C4551: в вызове функции отсутствует список аргументов
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(25,58): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(169): warning C4715: Boss: значение возвращается не при всех путях выполнения
-  RGP_Game.vcxproj -> C:\Users\Frein\Desktop\clone\Project-RPG-\RGP_Game\x64\Debug\RGP_Game.exe
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\ClassSelection.h(42,15): warning C4102: choosing_class: неиспользованная метка
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(59,37): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(68,38): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(113,3): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(206,3): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Battle_module.h(299,3): warning C4551: в вызове функции отсутствует список аргументов
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(25,58): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\RGP_Game\Boss_Fight.h(169): warning C4715: Boss: значение возвращается не при всех путях выполнения
+  RGP_Game.vcxproj -> C:\Users\Frein\Desktop\clone 2\Project-RPG-\RGP_Game\x64\Debug\RGP_Game.exe
