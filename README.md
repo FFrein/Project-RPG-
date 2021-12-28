@@ -5,6 +5,6 @@
 Команда:</br>
 Дима Трубач (DimaXDD)</br>
 Никита Кутейко (Phobielone)</br>
-Ломако Александр (sads sasha)</br>
+Ломако Александр (Al_lo)</br>
 Песецкий Илья (Svendell)</br>
 Песецкий Никита (FFrein and Friezen)</br>
