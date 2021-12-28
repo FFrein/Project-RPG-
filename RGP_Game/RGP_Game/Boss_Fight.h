@@ -9,7 +9,7 @@ int boss_health = 2000;
 int boss_block;
 int x;
 int status=0;
-
+int hero_damage;
 
 
 int Boss() {
@@ -20,6 +20,15 @@ start:
 	if (boss_health <= 0) {
 		status = 1;
 		return 0;
+	}
+	if (hero_type == 1) {
+		hero_damage = (hero_level * 10) + (hero_agility * 0.1) + (hero_intellect * 0.1);
+	}
+	if (hero_type == 2) {
+		hero_damage = hero_agility / 2;
+	}
+	if (hero_type == 3) {
+		hero_damage = hero_intellect / 2;
 	}
 
 	system("color 0A");
@@ -62,10 +71,13 @@ start:
 		{
 			system("cls");
 			Charachter();
-			cout << "Вы нанесли " << damage << " урона" << endl;
-			boss_health -= damage;
+			cout << "Вы нанесли " << hero_damage << " урона" << endl;
+			boss_health -= hero_damage;
 			cout << "Вы получили " << boss_dmg << "урона" << endl;
-
+			hero_health -= boss_dmg;
+			Sleep(2000);
+			system("cls");
+			goto start;
 		}
 
 	case 2:
@@ -110,7 +122,7 @@ start:
 				x = rand() % 50;
 				if (x <= 25) {
 					cout << "Вы удержали удар, и сразу же атакуете";
-					boss_health -= damage;
+					boss_health -= hero_damage;
 				}
 				else {
 					cout << "Вы не сдержали удар, вам нанесли " << boss_dmg;

@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <math.h>
 #include <string>
+#include <cctype>
+
 using namespace std;
 void products();
 
@@ -15,7 +17,16 @@ shop_c:
 	/// Цикл покупки и выхода из магазина
 shop_ch:
 	do {
+		cin.ignore(1000, '\n');
 		cin >> action_num;
+		if (action_num <= 0 || action_num >= 6 || cin.fail() == true) // проверка корректности
+		{
+			cin.clear();
+			system("cls");
+			cout << "Введите корректно" << endl;
+			goto shop_c;
+
+		}
 		if (action_num == 1) {
 			if (hero_money >= 20) {
 				hero_health = hero_health + 10; // 10 -- увеличили здоровье на 10 едениц // МОЖНО МЕНЯТЬ НА ЧИСЛО, КОТОРОЕ ВАМ НУЖНО

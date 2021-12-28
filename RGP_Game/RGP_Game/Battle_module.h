@@ -16,7 +16,7 @@ int experience ;
 int stomina = 100;
 int monster_choose;
 
-int mob_level = (rand() % (hero_level + 5));
+int mob_level;
 
 void Battle() {
 	int start_health = hero_health;
@@ -25,7 +25,7 @@ void Battle() {
 	monster_choose = (rand() % 7);
 	setlocale(LC_ALL, "Rus");
 	experience = 0;
-	mob_level = (rand() % (hero_level + 5));
+	mob_level = (rand() % (hero_level + 5)) + 1;
 	enemy();
 mchose:
 	do {
@@ -88,7 +88,7 @@ mchose:
 			experience += (start_health - hero_health) * 2;
 			cout << "Вы получаете "<<experience<<" опыта" << endl;
 			cout << "У вас " << experience << " опыта" << endl;
-			Sleep(2000);
+			Sleep(3000);
 		}
 		else
 		{
@@ -99,7 +99,7 @@ mchose:
 			experience += start_health - hero_health;
 			cout << "Вы получаете " << experience << " опыта" << endl;
 			cout << "У вас " << experience << " опыта" << endl;
-			Sleep(2000);
+			Sleep(3000);
 		}
 	}
 }
@@ -112,7 +112,7 @@ voinchose:
 	if (hero_health <= 0 || health_mob <= 0) {
 		exit;
 	}
-	cout << "1 - атака оружием " << endl << "2 - метнуть кинжал " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад";
+	cout << "1 - атака оружием " << endl << "2 - метнуть кинжал " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад" << endl;
 	cin.ignore(1000, '\n');
 	cin >> m;
 	switch (m[0]) {
@@ -123,11 +123,11 @@ voinchose:
 		health_mob -= damage;
 		cout << "У врага : " << health_mob << " hp" << endl;
 		cout << "Получаемый урон : " << damage_mob << endl;
-		health_mob -= damage_mob;
-		cout << "Жизни героя : " << health_mob << " hp " << endl;
+		hero_health -= damage_mob;
+		cout << "Жизни героя : " << hero_health << " hp " << endl;
 		stomina -= 15;
 		cout << "Выносливость : " << stomina << endl;
-		Sleep(2000);
+		Sleep(3000);
 		system("cls");
 		break;
 		}
@@ -149,7 +149,7 @@ voinchose:
 		cout << "Жизни героя : " << hero_health << " hp" << endl;
 		stomina -= 30;
 		cout << "Выносливость : " << stomina << endl;
-		Sleep(2000);
+		Sleep(3000);
 		system("cls");
 		break;
 		}
@@ -205,7 +205,7 @@ voinchose:
 	if (hero_health <= 0 || health_mob <= 0) {
 		exit;
 	}
-	cout << "1 - Одиночный выстрел" << endl << "2 - Огненная стрела " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад";
+	cout << "1 - Одиночный выстрел" << endl << "2 - Огненная стрела " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад" << endl;
 	cin.ignore(1000, '\n');
 	cin >> m;
 	switch (m[0]) {
@@ -216,11 +216,11 @@ voinchose:
 		health_mob -= damage;
 		cout << "У врага : " << health_mob << " hp" << endl;
 		cout << "Получаемый урон : " << damage_mob << endl;
-		health_mob -= damage_mob;
-		cout << "Жизни героя : " << health_mob << " hp " << endl;
+		hero_health -= damage_mob;
+		cout << "Жизни героя : " << hero_health << " hp " << endl;
 		stomina -= 15;
 		cout << "Выносливость : " << stomina << endl;
-		Sleep(2000);
+		Sleep(3000);
 		system("cls");
 		break;
 		}
@@ -242,7 +242,7 @@ voinchose:
 		cout << "Жизни героя : " << hero_health << " hp" << endl;
 		stomina -= 30;
 		cout << "Выносливость : " << stomina << endl;
-		Sleep(2000);
+		Sleep(3000);
 		system("cls");
 		break;
 		}
@@ -298,7 +298,7 @@ voinchose:
 	if (hero_health <= 0 || health_mob <= 0) {
 		exit;
 	}
-	cout << "1 - Ударить молнией " << endl << "2 - Метнуть фаербол " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад";
+	cout << "1 - Ударить молнией " << endl << "2 - Метнуть фаербол " << endl << "3 - Блокировать" << endl << "4 - Использовать зелье здоровья" << endl << "5 - Назад" << endl;
 	cin.ignore(1000, '\n');
 	cin >> m;
 	switch (m[0]) {
@@ -310,7 +310,7 @@ voinchose:
 			cout << "У врага : " << health_mob << " hp" << endl;
 			cout << "Получаемый урон : " << damage_mob << endl;
 			hero_health -= damage_mob;
-			cout << "Жизни героя : " << health_mob << " hp " << endl;
+			cout << "Жизни героя : " << hero_health << " hp " << endl;
 			stomina -= 15;
 			cout << "Выносливость : " << stomina << endl;
 			Sleep(3000);
